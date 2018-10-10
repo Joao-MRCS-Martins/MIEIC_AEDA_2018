@@ -1,0 +1,142 @@
+\hypertarget{class_animal}{}\section{Animal Class Reference}
+\label{class_animal}\index{Animal@{Animal}}
+
+
+Inherited by \mbox{\hyperlink{class_cao}{Cao}}, and \mbox{\hyperlink{class_morcego}{Morcego}}.
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_animal_a494c55efcd03365c4effd6a0b6a6df26}{Animal}} (string nome, int idade)
+\item 
+virtual \mbox{\hyperlink{class_animal_a16d8b7f94611cc65f5cdb58cc105527b}{$\sim$\+Animal}} ()
+\item 
+string \mbox{\hyperlink{class_animal_a16dab693b54ccdb94ead24d703f6d5a6}{get\+Nome}} () const
+\item 
+int \mbox{\hyperlink{class_animal_aff6bba590691cc405b5641d1b071dcd5}{get\+Idade}} () const
+\item 
+string \mbox{\hyperlink{class_animal_a03cbd88b0804573f4957b28fc24b55d3}{get\+Nome\+Vet}} () const
+\item 
+long \mbox{\hyperlink{class_animal_a8958667f21bf10093ab6047deabaf341}{get\+Cod\+Vet}} () const
+\item 
+virtual bool \mbox{\hyperlink{class_animal_a13862612b8bcf972d764b0ef81b66324}{e\+Jovem}} () const
+\item 
+virtual string \mbox{\hyperlink{class_animal_aee82faf16789092dc1fde106382e2b18}{get\+Informacao}} () const
+\item 
+void \mbox{\hyperlink{class_animal_aafcfbc37499b51a1e2a80263b3a65fac}{set\+Veterinario}} (\mbox{\hyperlink{class_veterinario}{Veterinario}} $\ast$v1)
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static int \mbox{\hyperlink{class_animal_a8d0b4ade587dd11205668b8caf2bce87}{get\+Mais\+Jovem}} ()
+\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_animal_a54f3f22208c7342039266c8c87de99e7}\label{class_animal_a54f3f22208c7342039266c8c87de99e7}} 
+string {\bfseries nome}
+\item 
+\mbox{\Hypertarget{class_animal_ace29239b979d2ed3d48f8929707599b7}\label{class_animal_ace29239b979d2ed3d48f8929707599b7}} 
+int {\bfseries idade}
+\item 
+\mbox{\Hypertarget{class_animal_ac09b1733db752e81740c78d67f4c06fc}\label{class_animal_ac09b1733db752e81740c78d67f4c06fc}} 
+\mbox{\hyperlink{class_veterinario}{Veterinario}} $\ast$ {\bfseries vet}
+\end{DoxyCompactItemize}
+\subsection*{Static Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_animal_a846972be7eec62b3ece6edc7efaf45e1}\label{class_animal_a846972be7eec62b3ece6edc7efaf45e1}} 
+static int {\bfseries mais\+Jovem} = 1000
+\end{DoxyCompactItemize}
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_animal_a494c55efcd03365c4effd6a0b6a6df26}\label{class_animal_a494c55efcd03365c4effd6a0b6a6df26}} 
+\index{Animal@{Animal}!Animal@{Animal}}
+\index{Animal@{Animal}!Animal@{Animal}}
+\subsubsection{\texorpdfstring{Animal()}{Animal()}}
+{\footnotesize\ttfamily Animal\+::\+Animal (\begin{DoxyParamCaption}\item[{string}]{nome,  }\item[{int}]{idade }\end{DoxyParamCaption})}
+
+The constructor for the class \mbox{\hyperlink{class_animal}{Animal}}. 
+\begin{DoxyParams}{Parameters}
+{\em nome,set} & the name of the animal. \\
+\hline
+{\em idade,set} & the age of the animal. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_animal_a16d8b7f94611cc65f5cdb58cc105527b}\label{class_animal_a16d8b7f94611cc65f5cdb58cc105527b}} 
+\index{Animal@{Animal}!````~Animal@{$\sim$\+Animal}}
+\index{````~Animal@{$\sim$\+Animal}!Animal@{Animal}}
+\subsubsection{\texorpdfstring{$\sim$\+Animal()}{~Animal()}}
+{\footnotesize\ttfamily virtual Animal\+::$\sim$\+Animal (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+Virtual member for the destructor of the class \mbox{\hyperlink{class_animal}{Animal}}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_animal_a13862612b8bcf972d764b0ef81b66324}\label{class_animal_a13862612b8bcf972d764b0ef81b66324}} 
+\index{Animal@{Animal}!e\+Jovem@{e\+Jovem}}
+\index{e\+Jovem@{e\+Jovem}!Animal@{Animal}}
+\subsubsection{\texorpdfstring{e\+Jovem()}{eJovem()}}
+{\footnotesize\ttfamily bool Animal\+::e\+Jovem (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Virtual member to return true if the animal is young. There won\textquotesingle{}t be no usage in \mbox{\hyperlink{class_animal}{Animal}} class, but on the classes derivated from it. 
+
+Reimplemented in \mbox{\hyperlink{class_morcego_a529bc1b0f9557b0b015dd517bad62ebc}{Morcego}}, and \mbox{\hyperlink{class_cao_afb98e22384401fa1c3b44537b5e28352}{Cao}}.
+
+\mbox{\Hypertarget{class_animal_a8958667f21bf10093ab6047deabaf341}\label{class_animal_a8958667f21bf10093ab6047deabaf341}} 
+\index{Animal@{Animal}!get\+Cod\+Vet@{get\+Cod\+Vet}}
+\index{get\+Cod\+Vet@{get\+Cod\+Vet}!Animal@{Animal}}
+\subsubsection{\texorpdfstring{get\+Cod\+Vet()}{getCodVet()}}
+{\footnotesize\ttfamily long Animal\+::get\+Cod\+Vet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the code of the veterinary assigned to the animal. \mbox{\Hypertarget{class_animal_aff6bba590691cc405b5641d1b071dcd5}\label{class_animal_aff6bba590691cc405b5641d1b071dcd5}} 
+\index{Animal@{Animal}!get\+Idade@{get\+Idade}}
+\index{get\+Idade@{get\+Idade}!Animal@{Animal}}
+\subsubsection{\texorpdfstring{get\+Idade()}{getIdade()}}
+{\footnotesize\ttfamily int Animal\+::get\+Idade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the age attribute of \mbox{\hyperlink{class_animal}{Animal}} object. \mbox{\Hypertarget{class_animal_aee82faf16789092dc1fde106382e2b18}\label{class_animal_aee82faf16789092dc1fde106382e2b18}} 
+\index{Animal@{Animal}!get\+Informacao@{get\+Informacao}}
+\index{get\+Informacao@{get\+Informacao}!Animal@{Animal}}
+\subsubsection{\texorpdfstring{get\+Informacao()}{getInformacao()}}
+{\footnotesize\ttfamily string Animal\+::get\+Informacao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [virtual]}}
+
+Virtual member that will return the \mbox{\hyperlink{class_animal}{Animal}} information, i.\+e., the attributes. 
+
+Reimplemented in \mbox{\hyperlink{class_morcego_a8dd752e35a5e37bda4d27b0eeb72912b}{Morcego}}, and \mbox{\hyperlink{class_cao_a5b2e5aff66f0c8a9076ef559c3862292}{Cao}}.
+
+\mbox{\Hypertarget{class_animal_a8d0b4ade587dd11205668b8caf2bce87}\label{class_animal_a8d0b4ade587dd11205668b8caf2bce87}} 
+\index{Animal@{Animal}!get\+Mais\+Jovem@{get\+Mais\+Jovem}}
+\index{get\+Mais\+Jovem@{get\+Mais\+Jovem}!Animal@{Animal}}
+\subsubsection{\texorpdfstring{get\+Mais\+Jovem()}{getMaisJovem()}}
+{\footnotesize\ttfamily int Animal\+::get\+Mais\+Jovem (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+Static member returns the age of the youngest animal created. \mbox{\Hypertarget{class_animal_a16dab693b54ccdb94ead24d703f6d5a6}\label{class_animal_a16dab693b54ccdb94ead24d703f6d5a6}} 
+\index{Animal@{Animal}!get\+Nome@{get\+Nome}}
+\index{get\+Nome@{get\+Nome}!Animal@{Animal}}
+\subsubsection{\texorpdfstring{get\+Nome()}{getNome()}}
+{\footnotesize\ttfamily string Animal\+::get\+Nome (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the name attribute of \mbox{\hyperlink{class_animal}{Animal}} object. \mbox{\Hypertarget{class_animal_a03cbd88b0804573f4957b28fc24b55d3}\label{class_animal_a03cbd88b0804573f4957b28fc24b55d3}} 
+\index{Animal@{Animal}!get\+Nome\+Vet@{get\+Nome\+Vet}}
+\index{get\+Nome\+Vet@{get\+Nome\+Vet}!Animal@{Animal}}
+\subsubsection{\texorpdfstring{get\+Nome\+Vet()}{getNomeVet()}}
+{\footnotesize\ttfamily string Animal\+::get\+Nome\+Vet (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the name of the veterinary assigned to the animal. \mbox{\Hypertarget{class_animal_aafcfbc37499b51a1e2a80263b3a65fac}\label{class_animal_aafcfbc37499b51a1e2a80263b3a65fac}} 
+\index{Animal@{Animal}!set\+Veterinario@{set\+Veterinario}}
+\index{set\+Veterinario@{set\+Veterinario}!Animal@{Animal}}
+\subsubsection{\texorpdfstring{set\+Veterinario()}{setVeterinario()}}
+{\footnotesize\ttfamily void Animal\+::set\+Veterinario (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_veterinario}{Veterinario}} $\ast$}]{v1 }\end{DoxyParamCaption})}
+
+Assigns a given veterinary to the animal. 
+\begin{DoxyParams}{Parameters}
+{\em v1} & is a pointer to an object of class Veterinary. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/joaom/\+Desktop/\+F\+E\+U\+P/2º ano/\+A\+E\+D\+A/\+M\+I\+E\+I\+C\+\_\+\+A\+E\+D\+A\+\_\+2018/\+T\+P3/src/animal.\+h\item 
+C\+:/\+Users/joaom/\+Desktop/\+F\+E\+U\+P/2º ano/\+A\+E\+D\+A/\+M\+I\+E\+I\+C\+\_\+\+A\+E\+D\+A\+\_\+2018/\+T\+P3/src/animal.\+cpp\end{DoxyCompactItemize}

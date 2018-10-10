@@ -1,0 +1,111 @@
+\hypertarget{class_zoo}{}\section{Zoo Class Reference}
+\label{class_zoo}\index{Zoo@{Zoo}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \mbox{\hyperlink{class_zoo_acfffd5509d859246eece72999610f12f}{num\+Animais}} () const
+\item 
+int \mbox{\hyperlink{class_zoo_a29354c84f702516e6be3164fa8511bb7}{num\+Veterinarios}} () const
+\item 
+void \mbox{\hyperlink{class_zoo_a03aa9b418835fdd9a51d883da3a55381}{adiciona\+Animal}} (\mbox{\hyperlink{class_animal}{Animal}} $\ast$a1)
+\item 
+string \mbox{\hyperlink{class_zoo_a21318dae5e1ecd14035abbf615ff55fc}{get\+Informacao}} () const
+\item 
+bool \mbox{\hyperlink{class_zoo_ad0a75b142f45a604df773593b9dae897}{animal\+Jovem}} (string nomeA)
+\item 
+void \mbox{\hyperlink{class_zoo_ae9c4942d74b1a1ab2ca4c8dd9e813e35}{aloca\+Veterinarios}} (istream \&isV)
+\item 
+bool \mbox{\hyperlink{class_zoo_adfa0c404d6e18e9576524d42f835aea6}{remove\+Veterinario}} (string nomeV)
+\item 
+bool \mbox{\hyperlink{class_zoo_a356d0617e61e139243faaf77c003ada2}{operator$<$}} (\mbox{\hyperlink{class_zoo}{Zoo}} \&zoo2) const
+\item 
+int \mbox{\hyperlink{class_zoo_ab96552c5262173467c7eaf5d7908c18e}{sum\+Idade}} () const
+\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_zoo_a03aa9b418835fdd9a51d883da3a55381}\label{class_zoo_a03aa9b418835fdd9a51d883da3a55381}} 
+\index{Zoo@{Zoo}!adiciona\+Animal@{adiciona\+Animal}}
+\index{adiciona\+Animal@{adiciona\+Animal}!Zoo@{Zoo}}
+\subsubsection{\texorpdfstring{adiciona\+Animal()}{adicionaAnimal()}}
+{\footnotesize\ttfamily void Zoo\+::adiciona\+Animal (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_animal}{Animal}} $\ast$}]{a1 }\end{DoxyParamCaption})}
+
+Adds a new animal to the zoo. 
+\begin{DoxyParams}{Parameters}
+{\em a1,the} & pointer to the animal object to be added to the zoo. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_zoo_ae9c4942d74b1a1ab2ca4c8dd9e813e35}\label{class_zoo_ae9c4942d74b1a1ab2ca4c8dd9e813e35}} 
+\index{Zoo@{Zoo}!aloca\+Veterinarios@{aloca\+Veterinarios}}
+\index{aloca\+Veterinarios@{aloca\+Veterinarios}!Zoo@{Zoo}}
+\subsubsection{\texorpdfstring{aloca\+Veterinarios()}{alocaVeterinarios()}}
+{\footnotesize\ttfamily void Zoo\+::aloca\+Veterinarios (\begin{DoxyParamCaption}\item[{istream \&}]{isV }\end{DoxyParamCaption})}
+
+Assigns vets from a istream to the animals in the zoo, distributing them properly. 
+\begin{DoxyParams}{Parameters}
+{\em isV,stream} & from where the vets information will be withdrawn. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_zoo_ad0a75b142f45a604df773593b9dae897}\label{class_zoo_ad0a75b142f45a604df773593b9dae897}} 
+\index{Zoo@{Zoo}!animal\+Jovem@{animal\+Jovem}}
+\index{animal\+Jovem@{animal\+Jovem}!Zoo@{Zoo}}
+\subsubsection{\texorpdfstring{animal\+Jovem()}{animalJovem()}}
+{\footnotesize\ttfamily bool Zoo\+::animal\+Jovem (\begin{DoxyParamCaption}\item[{string}]{nomeA }\end{DoxyParamCaption})}
+
+Searches for an animal with the name passed in the argument and returns true if its young. Returns false if he isn\textquotesingle{}t or doesn\textquotesingle{}t exist on the zoo. 
+\begin{DoxyParams}{Parameters}
+{\em nomeA,name} & of the animal to be searched. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_zoo_a21318dae5e1ecd14035abbf615ff55fc}\label{class_zoo_a21318dae5e1ecd14035abbf615ff55fc}} 
+\index{Zoo@{Zoo}!get\+Informacao@{get\+Informacao}}
+\index{get\+Informacao@{get\+Informacao}!Zoo@{Zoo}}
+\subsubsection{\texorpdfstring{get\+Informacao()}{getInformacao()}}
+{\footnotesize\ttfamily string Zoo\+::get\+Informacao (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the information about the animals living on the zoo at that moment. \mbox{\Hypertarget{class_zoo_acfffd5509d859246eece72999610f12f}\label{class_zoo_acfffd5509d859246eece72999610f12f}} 
+\index{Zoo@{Zoo}!num\+Animais@{num\+Animais}}
+\index{num\+Animais@{num\+Animais}!Zoo@{Zoo}}
+\subsubsection{\texorpdfstring{num\+Animais()}{numAnimais()}}
+{\footnotesize\ttfamily int Zoo\+::num\+Animais (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the number of animals living on the zoo at that moment. \mbox{\Hypertarget{class_zoo_a29354c84f702516e6be3164fa8511bb7}\label{class_zoo_a29354c84f702516e6be3164fa8511bb7}} 
+\index{Zoo@{Zoo}!num\+Veterinarios@{num\+Veterinarios}}
+\index{num\+Veterinarios@{num\+Veterinarios}!Zoo@{Zoo}}
+\subsubsection{\texorpdfstring{num\+Veterinarios()}{numVeterinarios()}}
+{\footnotesize\ttfamily int Zoo\+::num\+Veterinarios (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the number of veterinaries working on the zoo at that moment. \mbox{\Hypertarget{class_zoo_a356d0617e61e139243faaf77c003ada2}\label{class_zoo_a356d0617e61e139243faaf77c003ada2}} 
+\index{Zoo@{Zoo}!operator$<$@{operator$<$}}
+\index{operator$<$@{operator$<$}!Zoo@{Zoo}}
+\subsubsection{\texorpdfstring{operator$<$()}{operator<()}}
+{\footnotesize\ttfamily bool Zoo\+::operator$<$ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_zoo}{Zoo}} \&}]{zoo2 }\end{DoxyParamCaption}) const}
+
+Compares the sum of ages of the animals in each zoo, returns true if the first has a smaller sum than the zoo\textquotesingle{}s passed by argument. 
+\begin{DoxyParams}{Parameters}
+{\em zoo2,the} & reference to the zoo to be compared with. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_zoo_adfa0c404d6e18e9576524d42f835aea6}\label{class_zoo_adfa0c404d6e18e9576524d42f835aea6}} 
+\index{Zoo@{Zoo}!remove\+Veterinario@{remove\+Veterinario}}
+\index{remove\+Veterinario@{remove\+Veterinario}!Zoo@{Zoo}}
+\subsubsection{\texorpdfstring{remove\+Veterinario()}{removeVeterinario()}}
+{\footnotesize\ttfamily bool Zoo\+::remove\+Veterinario (\begin{DoxyParamCaption}\item[{string}]{nomeV }\end{DoxyParamCaption})}
+
+Searches for Vet with the name passed in the argument and removes him/her from the zoo\textquotesingle{}s Vets and unassigns them from their animals, and are replaced for another Vet. Returns true in case he/she is found and removed, returns false otherwise. 
+\begin{DoxyParams}{Parameters}
+{\em nomeV,name} & of the Vet to be removed. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_zoo_ab96552c5262173467c7eaf5d7908c18e}\label{class_zoo_ab96552c5262173467c7eaf5d7908c18e}} 
+\index{Zoo@{Zoo}!sum\+Idade@{sum\+Idade}}
+\index{sum\+Idade@{sum\+Idade}!Zoo@{Zoo}}
+\subsubsection{\texorpdfstring{sum\+Idade()}{sumIdade()}}
+{\footnotesize\ttfamily int Zoo\+::sum\+Idade (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+Returns the sum of the ages of the animals living in the zoo, at that moment. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/\+Users/joaom/\+Desktop/\+F\+E\+U\+P/2º ano/\+A\+E\+D\+A/\+M\+I\+E\+I\+C\+\_\+\+A\+E\+D\+A\+\_\+2018/\+T\+P3/src/zoo.\+h\item 
+C\+:/\+Users/joaom/\+Desktop/\+F\+E\+U\+P/2º ano/\+A\+E\+D\+A/\+M\+I\+E\+I\+C\+\_\+\+A\+E\+D\+A\+\_\+2018/\+T\+P3/src/zoo.\+cpp\end{DoxyCompactItemize}
