@@ -4,6 +4,7 @@ using namespace std;
 
 Veiculo::Veiculo(string mc, int m,int a) {
 	marca = mc;
+
 	mes = m;
 	ano = a;
 }

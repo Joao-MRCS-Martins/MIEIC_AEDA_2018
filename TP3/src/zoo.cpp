@@ -37,6 +37,8 @@ void Zoo::alocaVeterinarios(istream &isV) {
 	string cod;
 	while(getline(isV,nome)) {
 		getline(isV,cod);
+		nome.pop_back();
+		cod.pop_back();
 		Veterinario *v1 = new Veterinario(nome,stoi(cod));
 		veterinarios.push_back(v1);
 	}
@@ -53,8 +55,8 @@ void Zoo::alocaVeterinarios(istream &isV) {
 }
 
 bool Zoo::removeVeterinario (string nomeV) {
-	size_t i;
-	for (i = 0; i < veterinarios.size(); i++) {
+	size_t i=0;
+	for (; i < veterinarios.size(); i++) {
 		if (veterinarios.at(i)->getNome()  == nomeV)
 			break;
 	}
@@ -68,11 +70,11 @@ bool Zoo::removeVeterinario (string nomeV) {
 				animais.at(i3)->setVeterinario(veterinarios.at(0));
 			}
 		}
-	return true;
+		return true;
 	}
 	for (size_t i4 = 0; i4 < animais.size();i4++) {
 		if (animais.at(i4)->getNomeVet() == nomeV) {
-			animais.at(i4)->setVeterinario(veterinarios.at(i + 1));
+			animais.at(i4)->setVeterinario(veterinarios.at(i));
 		}
 	}
 	return true;

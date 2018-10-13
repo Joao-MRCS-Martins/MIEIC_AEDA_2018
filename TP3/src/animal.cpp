@@ -53,7 +53,7 @@ string Animal::getInformacao() const{
 	s1 = nome + ", " + to_string(idade) + ", " ;
 	if(vet == NULL)
 		return s1;
-	s1 += vet->getNome() + ", " + to_string(vet->getCod());
+	s1 += vet->getNome() + ", " + to_string(vet->getCod()) + ", ";
 	return s1;
 }
 
