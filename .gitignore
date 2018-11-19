@@ -1,3 +1,6 @@
+# Prerequisites
+*.d
+
 # Compiled Object files
 *.slo
 *.lo
@@ -15,6 +18,7 @@
 
 # Fortran module files
 *.mod
+*.smod
 
 # Compiled Static libraries
 *.lai
@@ -27,3 +31,19 @@
 *.out
 *.app
 /.metadata/
+*.zip
+/.idea
+/html/
+/latex/
+*.Doxyfile
+*.Doxyfile.bak
+*.html
+*.png
+*.js
+*.css
+*.tex
+*.eps
+doxygen.sty
+Makefile
+
+Classes/
