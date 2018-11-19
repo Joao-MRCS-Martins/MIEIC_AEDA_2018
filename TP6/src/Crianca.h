@@ -6,6 +6,7 @@
 #ifndef CRIANCA_H_
 #define CRIANCA_H_
 
+#include <iostream>
 #include <string>
 #include <sstream>
 using namespace std;

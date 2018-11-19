@@ -9,7 +9,8 @@
 #include "Crianca.h"
 #include <list>
 #include <string>
-
+#include <algorithm>
+#include <vector>
 using namespace std;
 
 class Jogo
