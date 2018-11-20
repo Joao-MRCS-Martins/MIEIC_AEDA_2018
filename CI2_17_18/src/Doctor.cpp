@@ -48,11 +48,37 @@ Patient Doctor::removeNextPatient() {
 	else throw PatientInexistent();
 }
 
-
+bool Doctor::operator <(const Doctor &d1)
+{
+	if(this->getPatients().size() < d1.getPatients().size())
+		return true;
+	else if (this->getPatients().size() == d1.getPatients().size())
+		return this->getMedicalSpecialty() < d1.getMedicalSpecialty();
+	else
+		return false;
+}
 
 
 void Doctor::moveToFront(unsigned codP1) {
-	// TODO
+	queue<Patient> q1 = patients;
+	queue<Patient> q2;
+	while(!q1.empty()) {
+		if(q1.front().getCode() == codP1) {
+			q2.push(q1.front());
+			break;
+		}
+		q1.pop();
+	}
 
+	while(patients.size() > 0) {
+		if(patients.front().getCode() == codP1) {
+			patients.pop();
+			continue;
+		}
+
+		q2.push(patients.front());
+		patients.pop();
+	}
+	patients = q2;
 }
 

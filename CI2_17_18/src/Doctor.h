@@ -7,7 +7,7 @@
 
 #include <string>
 #include <queue>
-
+#include <iostream>
 
 using namespace std;
 
@@ -15,6 +15,7 @@ class Patient {
   unsigned codeP;
   string medicalSpecialty;
 public:
+  Patient() {};
   Patient(unsigned cod, string mS);
   string getMedicalSpecialty() const;
   unsigned getCode() const;
@@ -33,7 +34,7 @@ public:
   queue<Patient> getPatients() const;
   void addPatient(const Patient &p1);
   Patient removeNextPatient();
-
+  bool operator <(const Doctor &d1);
   void moveToFront(unsigned codP1);
 
   class PatientInexistent {};
