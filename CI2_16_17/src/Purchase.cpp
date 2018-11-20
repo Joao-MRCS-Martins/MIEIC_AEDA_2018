@@ -59,18 +59,17 @@ void Purchase::putInBag(Article* article) {
 vector<Article*> Purchase::popPresents() {
 	vector<Article*> vec;
 	list<stack<Article*>>::iterator it;
-
+	list<stack<Article*>>::iterator it_aux;
 	for(it = bags.begin(); it != bags.end(); it++) {
 		vector<Article*> v1;
 		while(!it->empty()) {
 			if(it->top()->getPresent()) {
 				vec.push_back(it->top());
-				it->pop();
 			}
 			else {
 				v1.push_back(it->top());
-				it->pop();
 			}
+			it->pop();
 		}
 			for(size_t i = v1.size()-1;i>=0;i--) {
 				it->push(v1[i]);
