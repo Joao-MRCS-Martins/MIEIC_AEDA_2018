@@ -65,7 +65,7 @@ void test_B_() {
 
 // Purchase::popPresents()
 void test_C_() {
-
+/*
 	list< stack<Article*> > bs;
 
 	int npresents=0, counter=0;
@@ -106,7 +106,7 @@ void test_C_() {
 			it->pop();
 		}
 	}
-
+*/
 }
 
 // AfterSalesService::pickPresentsFromTable()

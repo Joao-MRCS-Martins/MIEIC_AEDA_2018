@@ -44,9 +44,14 @@ void AfterSalesService::dropPresentsOnTable(vector<Article*> presents) {
  */
 vector<Article*> AfterSalesService::pickPresentsFromTable(long client) {
 
-	// TODO
-
 	vector<Article*> clientPresents;
+	for(size_t i =0;i<presentsTable.size();i++) {
+		if(presentsTable[i]->getClient() == client) {
+			clientPresents.push_back(presentsTable[i]);
+			presentsTable.erase(presentsTable.begin() +i);
+			i--;
+		}
+	}
 	return clientPresents;
 }
 
@@ -57,9 +62,29 @@ vector<Article*> AfterSalesService::pickPresentsFromTable(long client) {
  *       the one with lower present number should have priority (clients should not wait too much);
  * (iii) else, maintain article order in the table.
  */
-void AfterSalesService::sortArticles() {
+bool Compare(Article* a1, Article* a2) {
+	if (a1->getDeliverHome() && !a2->getDeliverHome())
+		return false;
+	else if(!a1->getDeliverHome() && a2->getDeliverHome())
+		return true;
+	else if(!a1->getDeliverHome() && !a2->getDeliverHome()) {
+		if (abs(a1->getPresentNumber() - a2->getPresentNumber()) > 2){
+					return (a1->getPresentNumber() < a2->getPresentNumber());
+		}
+	}
+	return false;
+}
 
-	// TODO
+void AfterSalesService::sortArticles() {
+	vector<Article*> first_vec;
+	for(size_t i = 0;i < 10;i++) {
+			first_vec.push_back(presentsTable[i]);
+	}
+
+	sort(first_vec.begin(),first_vec.end(), Compare);
+	for(size_t i = 0; i< 10;i++) {
+			presentsTable[i] = first_vec[i];
+	}
 
 }
 
@@ -68,8 +93,12 @@ void AfterSalesService::sortArticles() {
  */
 void AfterSalesService::enqueueArticles() {
 
-	// TODO
-
+	while(toWrap.size() < toWrapQueueSize) {
+		if(presentsTable.empty())
+			break;
+		toWrap.push(presentsTable[0]);
+		presentsTable.erase(presentsTable.begin());
+	}
 }
 
 /**
@@ -77,9 +106,21 @@ void AfterSalesService::enqueueArticles() {
  */
 Article* AfterSalesService::wrapNext() {
 
-	// TODO
+	if(toWrap.empty())
+		return NULL;
+	Article* a1;
+	if(toWrap.front()->getDeliverHome())
+	{
+		toDeliver.push(toWrap.front());
+		toWrap.pop();
+		return NULL;
 
-	return 0;
+	}
+	else {
+		a1 = toWrap.front();
+		toWrap.pop();
+		return a1;
+	}
 
 }
 

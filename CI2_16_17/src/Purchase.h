@@ -12,7 +12,7 @@
 #include <list>
 #include <vector>
 #include "Article.h"
-
+#include <iostream>
 class Purchase {
 	const long client;
 	std::list< std::stack<Article*> > bags;
