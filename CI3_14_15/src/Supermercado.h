@@ -48,7 +48,8 @@ public:
 	void popItem(){ if(!itens.empty()) itens.pop(); }
 	void pushItem(const Item& umItem){ itens.push(umItem); }
 	bool empty() const{ return itens.empty(); }
-	//int novoItem(const Item& umItem);
+	void setItens(const stack<Item> &i1) {itens = i1;}
+	int novoItem(const Item& umItem);
 };
 
 class Cliente {
@@ -69,12 +70,12 @@ public:
 	}
 	int numCestos() const { return cestos.size(); }
 
-	//int numeroItens() const;
-	//int valorItens() const;
-	//int trocarItem(Item& novoItem);
-	//void organizarCestos();
-	//vector<string> contarItensPorTipo();
-	//int novoItem(const Item& umItem);
+	int numeroItens() const;
+	int valorItens() const;
+	int trocarItem(Item& novoItem);
+	void organizarCestos();
+	vector<string> contarItensPorTipo();
+	int novoItem(const Item& umItem);
 };
 
 class Supermercado {
@@ -89,8 +90,14 @@ public:
 	queue<Cliente> getFilaNormal() const { return filaNormal; }
 	queue<Cliente> getFilaPrioritaria() const { return filaPrioritaria; }
 
-	//int novoCliente(Cliente& umCliente);
-	//Cliente sairDaFila(string umNomeDeCliente);
+	int novoCliente(Cliente& umCliente);
+	Cliente sairDaFila(string umNomeDeCliente);
+	class ClienteInexistente {
+		string name;
+	public:
+		ClienteInexistente(string name) { this->name = name;}
+		string getNome() { return name;}
+	};
 };
 
 

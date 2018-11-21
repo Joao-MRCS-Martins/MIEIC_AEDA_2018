@@ -4,7 +4,7 @@
 #include "Supermercado.h"
 
 void test_a_NumeroValorItens() {
-	/*
+
 	Item i1(5, 2, 2, "uva", "fruta");
 	Item i2(10, 1, 1, "dentifico", "higiene");
 	Item i3(7, 3, 3, "detergente", "limpeza");
@@ -28,11 +28,11 @@ void test_a_NumeroValorItens() {
 
 	ASSERT_EQUAL(5, joao.numeroItens());
 	ASSERT_EQUAL(39, joao.valorItens());
-	*/
+
 }
 
 void test_b_trocarItem() {
-	/*
+
 	Item maca(1, 1, 1, "maca", "fruta");
 	Item arroz(2, 1, 1, "arroz", "grao");
 	Item lixivia(3, 2, 2, "lixivia", "limpeza");
@@ -58,11 +58,11 @@ void test_b_trocarItem() {
 	Item shampooBarato(3, 2, 2, "shampoo", "higiene");
 
 	ASSERT_EQUAL(3, joao.trocarItem(shampooBarato));
-	*/
+
 }
 
 void test_c_organizarCestos() {
-	/*
+
 	Item i1(1, 1, 100, "melancia", "fruta");
 	Item i2(1, 1, 60, "melao", "fruta");
 	Item i3(1, 1, 20, "maca", "fruta");
@@ -95,11 +95,11 @@ void test_c_organizarCestos() {
 	temp.pop();
 	ASSERT_EQUAL(100, temp.top().peso);
 	temp.pop();
-	*/
+
 }
 
 void test_d_contarTiposItens() {
-	/*
+
 	Item maca(1, 1, 1, "maca", "fruta");
 	Item arroz(2, 1, 1, "arroz", "grao");
 	Item lixivia(3, 2, 2, "lixivia", "limpeza");
@@ -130,11 +130,11 @@ void test_d_contarTiposItens() {
 	it = find(contagens.begin(), contagens.end(), "higiene 5");
 
 	ASSERT_EQUAL(it != contagens.end(), true);
-	*/
+
 }
 
 void test_e_novoItem() {
-	/*
+
 	Item i1(1, 3, 3, "melancia", "fruta");
 	Item i2(1, 3, 3, "melao", "fruta");
 	Item i3(1, 3, 3, "maca", "fruta");
@@ -153,11 +153,11 @@ void test_e_novoItem() {
 	joao.addCesto(c);
 
 	ASSERT_EQUAL(2, joao.novoItem(i4));
-	*/
+
 }
 
 void test_f_novoCliente() {
-	/*
+
 	Supermercado jumbo;
 	Item i1(1, 3, 3, "melancia", "fruta");
 	Item i2(1, 3, 3, "melao", "fruta");
@@ -190,7 +190,7 @@ void test_f_novoCliente() {
 	maria.addCesto(c);
 	ASSERT_EQUAL(4, jumbo.novoCliente(joana));
 	ASSERT_EQUAL(2, jumbo.tamanhoFilaNormal());
-	*/
+
 }
 
 void test_g_sairDaFila() {
@@ -214,7 +214,7 @@ void test_g_sairDaFila() {
 	jumbo.setFilaPrioritaria(fp);
 
 
-	/*
+
 	ASSERT_THROWS(jumbo.sairDaFila("Ricardo"), Supermercado::ClienteInexistente);
 	try {
 			jumbo.sairDaFila("Ricardo");
@@ -237,7 +237,7 @@ void test_g_sairDaFila() {
 	c1=jumbo.sairDaFila("Ana");
 	ASSERT_EQUAL("Ana",c1.getNome());
 	ASSERT_EQUAL(0,jumbo.tamanhoFilaPrioritaria());
-	*/
+
 }
 
 void thisIsATest() {
