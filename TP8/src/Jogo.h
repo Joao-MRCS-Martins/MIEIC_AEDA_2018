@@ -4,6 +4,7 @@
 #include "BinaryTree.h"
 #include <iostream>
 #include <stdlib.h>
+#include <sstream>
 using namespace std;
 
 
@@ -17,6 +18,8 @@ public:
  bool getEstado() const { return estado; }
  int getNVisitas() const { return nVisitas; }
  friend ostream &operator << (ostream &os, Circulo &c1);
+ void trocaEstado() { estado = (!estado);}
+ void incVisitas() { nVisitas++;}
 };
 
 
@@ -29,6 +32,7 @@ public:
 	string escreveJogo();
 	int jogada();
 	int maisVisitado();
+	BinaryTree<Circulo> comecaJogo(int pos,int niv,vector<int> &pontos,vector<bool> &estados);
 };
 
 

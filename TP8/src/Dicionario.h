@@ -32,11 +32,16 @@ public:
 // a alterar
 class PalavraNaoExiste
 {
+	string pAnt;
+	string sAnt;
+	string pAps;
+	string sAps;
 public:
-	string getPalavraAntes() const { return ""; }
-	string getSignificadoAntes() const { return ""; }
-	string getPalavraApos() const { return ""; }
-	string getSignificadoApos() const { return ""; }
+	PalavraNaoExiste(string pa,string sa,string pap,string sap) {pAnt = pa; sAnt = sa; pAps = pap; sAps = sap;}
+	string getPalavraAntes() const ;
+	string getSignificadoAntes() const ;
+	string getPalavraApos() const ;
+	string getSignificadoApos() const ;
 };
 
 
