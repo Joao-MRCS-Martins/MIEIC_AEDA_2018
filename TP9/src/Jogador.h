@@ -12,12 +12,15 @@ struct apostaHash
 {
 	int operator() (const Aposta & ap) const
 	{
-		return 0;
+		int n =0;
+		for(size_t i = ap.getNumeros().size(); i > 0; i--)
+			n = 69*n + i;
+		return n;
 	}
 	
 	bool operator() (const Aposta & ap1, const Aposta & ap2) const
 	{
-		return true;
+		return (ap1.calculaCertos(ap2.getNumeros()) == ap1.getNumeros().size());
 	}
 };
 
