@@ -33,6 +33,7 @@ priority_queue<Cinema> CinemaFinder::getCinemas() const
 //b1
 list<string> CinemaFinder::filmsWithActor(string actorName) const {
 	list<string> res;
+<<<<<<< Updated upstream
 	tabHFilm::const_iterator it;
 	for(it = films.begin();it != films.end();it++) {
 		list<string> actors = it->film->getActors();
@@ -44,6 +45,10 @@ list<string> CinemaFinder::filmsWithActor(string actorName) const {
 
 		}
 	}
+=======
+
+	// TODO
+>>>>>>> Stashed changes
 
 	return res;
 }
@@ -52,6 +57,7 @@ list<string> CinemaFinder::filmsWithActor(string actorName) const {
 //b2
 void CinemaFinder::addActor(string filmTitle, string actorName) {
 
+<<<<<<< Updated upstream
 	tabHFilm::const_iterator it;
 	for(it = films.begin();it != films.end();it++) {
 		if(it->film->getTitle() == filmTitle) {
@@ -69,6 +75,9 @@ void CinemaFinder::addActor(string filmTitle, string actorName) {
 	FilmPtr fp;
 	fp.film = f1;
 	films.insert(fp);
+=======
+	// TODO
+>>>>>>> Stashed changes
 
 }
 
@@ -77,6 +86,7 @@ void CinemaFinder::addActor(string filmTitle, string actorName) {
 string CinemaFinder::nearestCinema(string service1) const {
 	string cName="";
 
+<<<<<<< Updated upstream
 	priority_queue<Cinema> temp = cinemas;
 	while(!temp.empty()) {
 		list<string> servs = temp.top().getServices();
@@ -87,6 +97,9 @@ string CinemaFinder::nearestCinema(string service1) const {
 		}
 		temp.pop();
 	}
+=======
+	// TODO
+>>>>>>> Stashed changes
 
 	return cName;
 }
@@ -95,6 +108,7 @@ string CinemaFinder::nearestCinema(string service1) const {
 //c2
 void CinemaFinder::addServiceToNearestCinema(string service1, unsigned maxDistance) {
 
+<<<<<<< Updated upstream
 	if(cinemas.empty())
 		throw CinemaNotFound();
 	if(cinemas.top().getDistance() > maxDistance)
@@ -105,5 +119,8 @@ void CinemaFinder::addServiceToNearestCinema(string service1, unsigned maxDistan
 	cinemas.push(temp);
 
 
+=======
+	// TODO
+>>>>>>> Stashed changes
 
 }

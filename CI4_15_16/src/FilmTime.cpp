@@ -29,9 +29,14 @@ bool FilmTime::operator == (const FilmTime &ft) const
 
 bool FilmTime::operator<(const FilmTime & ft1) const
 {
+<<<<<<< Updated upstream
 	if(this->getHour() == ft1.getHour())
 		return this->getRoomID() < ft1.getRoomID();
 	return this->getHour() < ft1.getHour();
+=======
+	//TODO: Implement a correct version of the operator
+	return true;
+>>>>>>> Stashed changes
 }
 
 

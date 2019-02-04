@@ -58,7 +58,14 @@ int User::numReadings() const {
 // TODO:
 //
 bool User::operator<(const User& u1) const {
+<<<<<<< Updated upstream
 	return this->getReadings().size() < u1.getReadings().size();
+=======
+	//TODO:
+	//...
+
+	return false;
+>>>>>>> Stashed changes
 }
 
 

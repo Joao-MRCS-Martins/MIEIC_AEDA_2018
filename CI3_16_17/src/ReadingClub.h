@@ -21,14 +21,28 @@ struct userRecordHash
 {
 	int operator() (const UserRecord& ur) const
 	{
+<<<<<<< Updated upstream
 		int n = ur.getEMail().at(0) + ur.getEMail().at(2);
 		n /= ur.getEMail().size();
 		return n;
+=======
+		//TODO:
+		//...
+
+		return 0;
+>>>>>>> Stashed changes
 	}
 
 	bool operator() (const UserRecord& ur1, const UserRecord& ur2) const
 	{
+<<<<<<< Updated upstream
 		return ur1.getEMail() == ur2.getEMail();
+=======
+		//TODO:
+		//...
+
+		return false;
+>>>>>>> Stashed changes
 	}
 };
 

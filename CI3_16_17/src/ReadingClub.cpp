@@ -90,6 +90,7 @@ void ReadingClub::setBestReaderCandidates(priority_queue<User>& candidates) {
 //
 
 void ReadingClub::generateCatalog() {
+<<<<<<< Updated upstream
 	BookCatalogItem null("","",0);
 	for(int i = 0; i < this->books.size(); i++) {
 		BookCatalogItem b1 = this->getCatalogItem(books[i]->getTitle(),books[i]->getAuthor());
@@ -108,10 +109,16 @@ void ReadingClub::generateCatalog() {
 
 		}
 	}
+=======
+	//TODO:
+	//...
+
+>>>>>>> Stashed changes
 }
 
 vector<Book*> ReadingClub::getAvailableItems(Book* book) const {
 	vector<Book*> temp;
+<<<<<<< Updated upstream
 	BSTItrIn<BookCatalogItem> bt(this->catalogItems);
 	while(!bt.isAtEnd()) {
 		BookCatalogItem b1 = bt.retrieve();
@@ -123,10 +130,16 @@ vector<Book*> ReadingClub::getAvailableItems(Book* book) const {
 		}
 		bt.advance();
 	}
+=======
+	//TODO:
+	//...
+
+>>>>>>> Stashed changes
 	return temp;
 }
 
 bool ReadingClub::borrowBookFromCatalog(Book* book, User* reader) {
+<<<<<<< Updated upstream
 
 	vector<Book*> avail = this->getAvailableItems(book);
 	if(avail.size() == 0)
@@ -135,6 +148,12 @@ bool ReadingClub::borrowBookFromCatalog(Book* book, User* reader) {
 	avail[0]->setReader(reader);
 	return true;
 
+=======
+	//TODO:
+	//...
+
+	return false;
+>>>>>>> Stashed changes
 }
 
 
@@ -143,11 +162,17 @@ bool ReadingClub::borrowBookFromCatalog(Book* book, User* reader) {
 //
 
 void ReadingClub::addUserRecord(User* user) {
+<<<<<<< Updated upstream
 	this->userRecords.insert(user);
+=======
+	//TODO:
+	//...
+>>>>>>> Stashed changes
 
 }
 
 void ReadingClub::changeUserEMail(User* user, string newEMail) {
+<<<<<<< Updated upstream
 	for(auto i: this->userRecords) {
 		if(i.getEMail() == user->getEMail()) {
 			userRecords.erase(i);
@@ -155,6 +180,11 @@ void ReadingClub::changeUserEMail(User* user, string newEMail) {
 			userRecords.insert(user);
 		}
 	}
+=======
+	//TODO:
+	//...
+
+>>>>>>> Stashed changes
 }
 
 
@@ -163,15 +193,21 @@ void ReadingClub::changeUserEMail(User* user, string newEMail) {
 //
 
 void ReadingClub::addBestReaderCandidates(const vector<User>& candidates, int min) {
+<<<<<<< Updated upstream
 
 	for(size_t i =0; i< candidates.size();i++) {
 		if(candidates[i].getReadings().size() +1>= min)
 			this->readerCandidates.push(candidates[i]);
 	}
+=======
+	//TODO:
+	//...
+>>>>>>> Stashed changes
 
 }
 
 int ReadingClub::awardReaderChampion(User& champion) {
+<<<<<<< Updated upstream
 	if(this->readerCandidates.empty())
 		return 0;
 	if(this->readerCandidates.size() == 1) {
@@ -188,6 +224,12 @@ int ReadingClub::awardReaderChampion(User& champion) {
 		champion = n1;
 		return readerCandidates.size();
 	}
+=======
+	//TODO:
+	//...
+
+	return 0;
+>>>>>>> Stashed changes
 }
 
 

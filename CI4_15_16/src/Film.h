@@ -20,11 +20,14 @@ public:
 	string getTitle() const;
 	list<string> getActors() const;
 	void addActor(string actorName);
+<<<<<<< Updated upstream
 	ostream& operator<<(ostream& out)
 	{
 		out << title;
 		return out;
 	}
+=======
+>>>>>>> Stashed changes
 };
 
 struct FilmPtr {

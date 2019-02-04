@@ -21,7 +21,11 @@ public:
 	Film* getFilm() const;
 	void setFilm(Film* f);
 	bool operator == (const FilmTime &ft) const;
+<<<<<<< Updated upstream
 	void setHour(unsigned h) { hour = h;}
+=======
+
+>>>>>>> Stashed changes
 	bool operator<(const FilmTime & ft1) const;  //TODO: Implement a correct version of the operator
 };
 

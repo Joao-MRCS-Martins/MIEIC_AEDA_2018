@@ -63,6 +63,7 @@ void BookCatalogItem::addItems(Book* book) {
 //
 
 bool BookCatalogItem::operator<(const BookCatalogItem &bci1) const {
+<<<<<<< Updated upstream
 	if(this->getTitle() == bci1.getTitle())
 		return this->getAuthor() < bci1.getAuthor();
 	else
@@ -71,4 +72,17 @@ bool BookCatalogItem::operator<(const BookCatalogItem &bci1) const {
 
 bool BookCatalogItem::operator==(const BookCatalogItem &bci1) const {
 	return this->getAuthor() == bci1.getAuthor() && this->getTitle() == bci1.getTitle();
+=======
+	//TODO:
+	//...
+
+	return false;
+}
+
+bool BookCatalogItem::operator==(const BookCatalogItem &bci1) const {
+	//TODO:
+	//...
+
+	return false;
+>>>>>>> Stashed changes
 }

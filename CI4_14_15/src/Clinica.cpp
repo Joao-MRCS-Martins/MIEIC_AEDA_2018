@@ -87,18 +87,28 @@ ConsultasVet::ConsultasVet(string umNomeVet): nomeVeterinario(umNomeVet),
 
 
 bool Consulta::operator < (const Consulta &c2) const {
+<<<<<<< Updated upstream
 	if(this->getMes()==c2.getMes()) {
 		if(this->getDia() == c2.getDia())
 			return this->getHora() < this->getHora();
 		return this->getDia() < c2.getDia();
 	}
 	return this->getMes() < c2.getMes();
+=======
+	//TODO: Implementar corretamente o operador
+	return true;
+>>>>>>> Stashed changes
 }
 
 bool Veterinario::operator<(const Veterinario& v1) const
 {
+<<<<<<< Updated upstream
 	if(this->getAnimais().size() == v1.getAnimais().size())
 		return this->getNome() > this->getNome();
 	return this->getAnimais().size() > v1.getAnimais().size();
+=======
+	//TODO: Implementar corretamente o operador
+	return true;
+>>>>>>> Stashed changes
 }
 

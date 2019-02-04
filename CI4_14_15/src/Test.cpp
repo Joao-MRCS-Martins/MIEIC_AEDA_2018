@@ -4,7 +4,11 @@
 #include "Clinica.h"
 
 void test_a1_addConsultas() {
+<<<<<<< Updated upstream
 
+=======
+	/*
+>>>>>>> Stashed changes
  	Clinica cli;
 
 	Consulta c1(2,10,3);
@@ -51,7 +55,11 @@ void test_a1_addConsultas() {
     cv=cli.getConsultasDisponiveis();
     ASSERT_EQUAL(2,cv.size());
     ASSERT_EQUAL("Maria Dinis",cv.front().nomeVeterinario);
+<<<<<<< Updated upstream
 
+=======
+    */
+>>>>>>> Stashed changes
 }
 
 void test_a2_veConsultasDisponiveis() {

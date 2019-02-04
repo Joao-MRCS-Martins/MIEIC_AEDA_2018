@@ -62,10 +62,19 @@ public:
 
 struct hAnimal {
 	int operator()(const Animal& a1) const{
+<<<<<<< Updated upstream
 		return a1.getEspecie().size()+a1.getNome().size()+a1.getNumConsultas();
 	}
 	bool operator()(const Animal& a1, const Animal& a2) const {
 		return a1.getEspecie() == a2.getEspecie() && a1.getNome() == a2.getNome() && a1.getNumConsultas() == a2.getNumConsultas();
+=======
+		//TODO: Implementar a funcao de dispersao e substituir corretamente o valor do return!
+		return -1;
+	}
+	bool operator()(const Animal& a1, const Animal& a2) const {
+		//TODO: Implementar a funcao de igualdade e substituir corretamente o valor do return!
+		return true;
+>>>>>>> Stashed changes
 	}
 };
 
@@ -85,7 +94,11 @@ public:
 	void addVeterinario(const Veterinario &v1);
 
 	//TODO: a realizar de acordo com o solicitado nas respectivas alíneas!
+<<<<<<< Updated upstream
 
+=======
+	/*
+>>>>>>> Stashed changes
 	void addConsultas(const vector<Consulta> consultas1, string nomeVet);
 	list<Consulta> veConsultasDisponiveis(int dia1, int dia2, int mesC, string nomeVet) const;
 	bool marcaConsulta(int &horaC, int &diaC, int &mesC, string nomeAnimal, string nomeVet);
@@ -93,7 +106,11 @@ public:
 	int numAnimaisEspecie(string umNomeEspecie) const;
 	Veterinario alocaVeterinario(string umNomeAnimal);
 	list<string> veterinariosMaisN(int n) const;
+<<<<<<< Updated upstream
 
+=======
+	*/
+>>>>>>> Stashed changes
 };
 
 #endif /* CLINICA_H_ */

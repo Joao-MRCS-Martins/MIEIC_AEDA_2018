@@ -36,14 +36,20 @@ void Cinema::addFilmTime(const FilmTime &ft1)
 
 bool Cinema::operator<(const Cinema & cr) const
 {
+<<<<<<< Updated upstream
 	if(this->getDistance() == cr.getDistance())
 		return this->getServices().size() < this->getServices().size();
 	return this->getDistance() > cr.getDistance();
+=======
+	//TODO: Implement a correct version of the operator
+	return true;
+>>>>>>> Stashed changes
 }
 
 
 //a1
 Film *Cinema::filmAtHour(unsigned &h1) const {
+<<<<<<< Updated upstream
 	BSTItrIn<FilmTime> it(this->timetable);
 	FilmTime prev(0,NULL,0);
 	while(!it.isAtEnd()) {
@@ -62,11 +68,19 @@ Film *Cinema::filmAtHour(unsigned &h1) const {
 	if(prev.getFilm()!= NULL)
 		h1 = prev.getHour();
 	return prev.getFilm();
+=======
+	Film *res = NULL;
+
+	// TODO
+
+	return res;
+>>>>>>> Stashed changes
 }
 
 
 //a2
 bool Cinema::modifyHour(unsigned h1, unsigned room1, unsigned h2) {
+<<<<<<< Updated upstream
 	BSTItrIn<FilmTime> it(this->timetable);
 	while(!it.isAtEnd()) {
 		if(it.retrieve().getHour() == h2 && it.retrieve().getRoomID() && it.retrieve().getFilm() != NULL)
@@ -85,11 +99,19 @@ bool Cinema::modifyHour(unsigned h1, unsigned room1, unsigned h2) {
 		it.advance();
 	}
 	return false;
+=======
+	bool res;
+
+	// TODO
+
+	return res;
+>>>>>>> Stashed changes
 }
 
 
 //a3
 unsigned Cinema::addFilm(Film *f1, unsigned h1) {
+<<<<<<< Updated upstream
 	unsigned roomToUse = 1;
 	BSTItrIn<FilmTime> it(this->timetable);
 	while(!it.isAtEnd()) {
@@ -101,6 +123,12 @@ unsigned Cinema::addFilm(Film *f1, unsigned h1) {
 		return 0;
 	FilmTime ft(h1,f1,roomToUse);
 	timetable.insert(ft);
+=======
+	unsigned roomToUse = 0;
+
+	// TODO
+
+>>>>>>> Stashed changes
 	return roomToUse;
 }
 
